@@ -12,6 +12,9 @@ body{
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
+.bg-black{
+    background-color: black;
+}
 .Header{
     position: fixed;
     width: 100%;
@@ -21,6 +24,7 @@ body{
     display: grid;
     grid-template-columns: auto 1fr;
     color: #ffffff;
+    z-index: 1;
 }
 .logoHeader{
     display: grid;
@@ -35,7 +39,7 @@ body{
     grid-template-columns: auto 1fr auto auto auto;
     align-items: center;
     justify-self: end;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 .Menu{
     list-style: none;
@@ -44,9 +48,47 @@ body{
 }
 .Menu-list{
     padding: 0px 12px;
+    cursor: pointer;
 }
+.Sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000000;
+    font-size: 16px;
+    /* margin-top: 10px; */
+}
+.SubMenu-list{
+    position: relative;
+    list-style: none;
+    padding: 10px 5px;
+    border-bottom: 1px solid #000000;
+}
+.Menu-list:hover .Sub-menu, .Sub-menu:hover{
+    display: block;
+}
+
+.slider{
+    display: flex;
+    height: 450px;
+}
+.slider-item{
+    position: absolute;
+    width: 100%;
+}
+.inactive{
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+.active{
+    opacity: 1;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .image-cover{
-    background-image: url('../assets/grama-fut.jpg');
+    background: linear-gradient(90deg,rgba(0,0,0,.7),rgba(0, 0, 0, .4)),url('../assets/grama-fut.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -58,7 +100,7 @@ body{
     -o-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
-    align-items: flex-end;
+    align-items: center;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -70,4 +112,52 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.circle-img{
+    background-color: #4d8429;
+    width: 290px;
+    height: 290px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+.slider-buttons{
+    position: relative;
+}
+.slider-indicators{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+.slider-indicators li{
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.slider-indicators li.active{
+    opacity: 1;
 }
