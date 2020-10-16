@@ -5,190 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sport Grass</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="Header">
-        <div class="logoHeader">
-            <figure class="logoHeader-container">
-                <img src="assets/logo.png" alt="Logo Sport Grass">
-            </figure>
-        </div>
-        <nav class="navHeader">
-            <ul class="Menu">
-                <li class="Menu-list">Inicio</li>
-                <li class="Menu-list">
-                    Productos
-                    <ul class="Sub-menu">
-                        <li class="SubMenu-list">Sport Grass</li>
-                        <li class="SubMenu-list">Sport Grounds</li>
-                        <li class="SubMenu-list">Epi Sports</li>
-                        <li class="SubMenu-list">Apeteck</li>
-                    </ul>
-                </li>
-                <li class="Menu-list">Servicios</li>
-                <li class="Menu-list">Contacto</li>
-                <li class="Menu-list">Other</li>
+    <section class="section-1">
+        <header>
+            <a href=""><img src="./assets/logo.png" alt="Logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Others</a></li>
             </ul>
-        </nav>
-    </header>
-    <section id="wrapper">
-        <div class="slider slide">
-            <div class="slider-item active" id="maxs">
-                <div class="image-cover">
-                    <div class="container mt-4">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
-                                <h1>Max S</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, maxime a. Odit, ad saepe ipsam tenetur ullam, est eveniet, corrupti id sed unde voluptatem impedit magni cumque iure deleniti ab.</p>
-                                <div class="row">
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 d-flex justify-content-center">
-                                <figure class="circle-img">
-                                    <img src="assets/grama-fut2.jpg" alt="" class="rounded-circle" width="260" height="260">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Sport <br><span>Grass</span></h2>
+                <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general, además la prestacion de servicios técnicos y de consultoría en las diferentes ramas de la arquitectura y de la ingeniería.</p>
+                <!-- <a href="#">View all products</a> -->
             </div>
-            <div class="slider-item inactive" id="duoshape">
-                <div class="image-cover">
-                    <div class="container mt-4">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
-                                <h1>Duo Shape</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, maxime a. Odit, ad saepe ipsam tenetur ullam, est eveniet, corrupti id sed unde voluptatem impedit magni cumque iure deleniti ab.</p>
-                                <div class="row">
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                    <div class="col-3">i</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 d-flex justify-content-center">
-                                <figure class="circle-img">
-                                    <img src="assets/grama-fut2.jpg" alt="" class="rounded-circle" width="260" height="260">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="imgBox">
+                <img src="./assets/deportista.png" class="image" alt="Grama">
             </div>
         </div>
-        <div class="slider-buttons">
-            <ol class="slider-indicators" id="slider-indicators">
-                <li data-slide-to="0" class="active" onclick="slide(this)"></li>
-                <li data-slide-to="1" onclick="slide(this)"></li>
-                <li data-slide-to="2" onclick="slide(this)"></li>
-            </ol>
+        <div class="content-thumb">
+            <ul class="thumb">
+                <li><!--class="active"-->
+                    <img src="./assets/maxs.jpg" alt="" onclick="imgSlider(0)">
+                    <!-- Sport Grass -->
+                </li>
+                <li>
+                    <img src="./assets/DuoShape.jpg" alt="" onclick="imgSlider(1)">
+                    <!-- Sport Grounds -->
+                </li>
+                <li>
+                    <img src="./assets/mixto.jpg" alt="" onclick="imgSlider(2)">
+                    <!-- Epi Sports -->
+                </li>
+                <li>
+                    <img src="./assets/infill.jpg" alt="" onclick="imgSlider(3)">
+                    <!-- Apeteck -->
+                </li>
+            </ul>
+            <span>Linea Sport Grass</span>
         </div>
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="./assets/logos/whatsapp.png" alt=""></a>
+                <a href="#"><img src="./assets/logos/correo.png" alt=""></a>
+                <a href="#"><img src="./assets/logos/linkedin.png" alt=""></a>
+            </li>
+        </ul>
     </section>
-    <section class="bg-light page-section">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <figure class="circle-img bg-blue">
-                        <img src="" alt="" class="rounded-circle" width="260" height="260">
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h2 class="title">Sport Gym</h2>
-                    <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam deserunt minima illo veritatis facilis dolor optio consequuntur consequatur voluptates, qui magni exercitationem eius? Corporis hic cupiditate quos, maiores ut pariatur.</p>
-                </div>
-            </div>
-        </div>
+    <section>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut officia laborum nulla doloremque quasi ipsam labore totam sunt sed voluptatibus reprehenderit minima tenetur rem nemo id, obcaecati eaque repudiandae vel!
     </section>
-    <section class="bg-black" id="animation-scroll" style="height: 2000px;">
-        <div class="row m-0">
-            <div class="col-12 col-md-6 p-0">
-                <canvas id="hero-lightpass"></canvas>
-            </div>
-            <div class="col-12 col-md-6">
-                <h1 class="text-white">Title</h1>
-            </div>
-        </div>
-    </section>
-    <script>
-        const html = document.documentElement;
-        const canvas = document.getElementById("hero-lightpass");
-        const context = canvas.getContext("2d");
-
-        const frameCount = 250;
-        const currentFrame = index => (
-            `http://127.0.0.1:5500/assets/video/00${index.toString().padStart(3, '0')}.jpg`
-        )
-
-        const preloadImages = () => {
-            for (let i = 1; i < frameCount; i++) {
-                const img = new Image();
-                img.src = currentFrame(i);
-            }
-        };
-
-        const img = new Image()
-        img.src = currentFrame(1);
-        canvas.width=720;
-        canvas.height=1080;
-        img.onload=function(){
-            context.drawImage(img, 0, 0);
-        }
-
-        const updateImage = index => {
-            img.src = currentFrame(index);
-            context.drawImage(img, 0, 0);
-        }
-
-        window.addEventListener('scroll', () => {  
-            const scrollTop = html.scrollTop;
-            const maxScrollTop = html.scrollHeight - window.innerHeight;
-            const scrollFraction = scrollTop / maxScrollTop;
-            console.log(scrollTop);
-            if(scrollTop >= 200){
-                const frameIndex = Math.min(
-                    frameCount - 1,
-                    Math.ceil(scrollFraction * frameCount)
-                );
-                requestAnimationFrame(() => updateImage(frameIndex + 1))
-                canvas.style.transform = `matrix(1, 0, 0, 1, ${frameIndex}, ${scrollFraction})`
-            }
-        });
-
-        preloadImages()
-
-
-        function slide(identifier){
-            const id = Number(identifier.dataset.slideTo)
-            switch (id) {
+    <script type="text/javascript">
+        function imgSlider(anything){
+            const textBox = document.querySelector('.textBox')
+            const imgBox = document.querySelector('.imgBox')
+            switch (anything){
                 case 0:
-                    
+                    textBox.classList.add('goodbye-left')
+                    setTimeout(()=> {
+                        const html = `<img src="./assets/maxs.jpg" alt="" onclick="imgSlider(0)">
+                                    <p>Bla bla bla bla bla bvla xfdsf vsatrfawssdfsda fdsg bersgdfd sgfdsg dsfbvdfb fdsgvcxbfdsgdsfv fdbgfd gfdhrhy  tewrsg</p>`
+                        textBox.innerHTML = html
+                        textBox.classList.remove('goodbye-left')
+                        textBox.classList.add('hello')
+                    }, 500)
+                    imgBox.classList.add('goodbye-right')
                 break;
                 case 1:
-                    const elements = document.getElementsByClassName('active')
-                    const element = document.getElementById('duoshape')
-                    const len = elements.length-1
-                    for(let i=0; i<len; i++){
-                        elements[i].classList.remove('active')
-                        elements[i].classList.add('inactive')
-                        
-                        element.classList.remove('inactive')
-                        element.classList.add('active')
-                    }
-
+                    img.src = `./assets/img-duoShape.jpg`
                 break;
-                default:
-                    console.log('none');
             }
         }
     </script>
-    <!-- jQuery and JS bundle w/ Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
