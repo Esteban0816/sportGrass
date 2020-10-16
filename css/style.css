@@ -9,17 +9,6 @@
 body{
     overflow-x: hidden;
 }
-.section-1{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2796b8;
-    transition: .5s;
-}
 header{
     position: absolute;
     top: 0;
@@ -47,6 +36,17 @@ header ul li a{
     font-weight: 400;
     margin-left: 40px;
     text-decoration: none;
+}
+.section-1{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2796b8;
+    transition: .5s;
 }
 .content{
     position: relative;
