@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
-
+:root {
+    --header-color: linear-gradient(90deg, rgba(28, 54, 67, .85) 0, rgba(39, 59, 71, .85) 25%, rgba(30, 83, 114, .9));
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,9 +12,11 @@ body{
     overflow-x: hidden;
 }
 header{
-    position: absolute;
+    background: var(--header-color);
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
     width: 100%;
     padding: 20px 100px;
     display: flex;
@@ -21,7 +25,7 @@ header{
 }
 header .logo{
     position: relative;
-    max-height: 80px;
+    max-height: 60px;
 }
 header ul{
     position: relative;
@@ -47,6 +51,7 @@ header ul li a{
     align-items: center;
     background: #2796b8;
     transition: .5s;
+    
 }
 .content{
     position: relative;
