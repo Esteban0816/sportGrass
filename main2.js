@@ -31,4 +31,9 @@ function select(p){
     }, 1500)
 }
 
-setInterval(select(), 6000)
+setTimeout(()=>{
+    setInterval(()=>{
+        select()
+        console.log('se ejecuta el interval');
+    }, 10000)
+}, 6000)
