@@ -41,17 +41,42 @@ header ul li a{
     margin-left: 40px;
     text-decoration: none;
 }
-.section-1{
+.section{
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2796b8;
     transition: .5s;
-    
+}
+#section-1{
+    min-height: 95vh;
+    padding: 80px 10px 100px 100px;
+
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover !important;
+    background-position: bottom !important;
+    transition: all .5s;
+}
+#section-2{
+    min-height: 100vh;
+    padding: 100px;
+}
+.bg-img{
+    background: url('../assets/cancha-fut.png');
+    filter: blur(1px);
+    background-position: center right;
+    background-size: cover;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+#section-3{
+    color: #fff;
 }
 .content{
     position: relative;
@@ -66,13 +91,13 @@ header ul li a{
 }
 .content .textBox h2{
     color: #fff;
-    font-size: 3.2em;
-    line-height: 1.5em;
+    font-size: 2.9em;
+    line-height: 1.25em;
     font-weight: 900;
     text-transform: uppercase;
 }
 .content .textBox h2 span{
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .content .textBox p{
     color: #fff;
@@ -90,14 +115,15 @@ header ul li a{
     text-transform: uppercase;
 }
 .content .imgBox{
-    width: 60px;
+    width: 600px;
     display: flex;
     padding-right: 50px;
     margin-top: 50px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .content .imgBox img{
-    max-width: 400px;
+    max-width: 300px;
+    position: relative;
 }
 .content-thumb{
     position: absolute;
@@ -126,10 +152,10 @@ header ul li a{
     transition: .5s;
 }
 .thumb li.active{
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 .thumb li:hover{
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 .thumb li img{
     max-width: 120px;
@@ -139,7 +165,6 @@ header ul li a{
     position: relative;
     top: 50%;
     right: 30px;
-    transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,11 +175,107 @@ header ul li a{
 }
 .sci li a{
     display: inline-block;
-    filter: invert(1);
     margin: 5px 0;
-    transform: scale(0.6);
+    transform: scale(.6);
+    color: #fff;
+    transition: .5s;
+}
+.sci li a:hover{
+    color: #70a73a;
+    transform: scale(.75);
+}
+.sci li a i{
+    font-size: 50px;
+    font-weight: 500;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    margin: 40px;
+}
+.container .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    z-index: 2;
+}
+.container .box:hover .imgBx{
+    transform: translate(-35px, -35px);
+}
+.container .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px;
+    transition: .5s ease-in-out;
+}
+.container .box:hover .content{
+    transform: translate(35px, 35px);
+}
+.container .box .content h2{
+    font-size: 20px;
+    color: #111;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.container .box .content h2 span{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+@media (max-width: 768px){
+    .container .box:hover .content{
+        animation: card .5s ease-in-out;
+    }
+    .container .box:hover .imgBx{
+        transform: translate(0, -35px);
+    }
+}
+@keyframes card {
+    from{
+        transform: translate(0, 35px);
+    }
+}
+.section-content{
+    position: absolute;
+    z-index: 2;
 }
 
+.d-none{
+    display: none;
+}
+.bg-light{
+    background-color: rgb(240, 240, 240);
+}
 
 
 
@@ -172,6 +293,16 @@ header ul li a{
 .hello{
     -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.soccer{
+    animation: rotate 3s ease-in-out;
+}
+.tennis{
+    animation: golpe 5s ease-in-out;
+    height: 30vh;
+}
+.basket{
+    animation: rebote 1.8s infinite linear;
 }
 @-webkit-keyframes slide-out-left {
     0% {
@@ -232,8 +363,8 @@ header ul li a{
               transform: scale(1);
       opacity: 1;
     }
-  }
-  @keyframes scale-in-center {
+}
+@keyframes scale-in-center {
     0% {
       -webkit-transform: scale(0);
               transform: scale(0);
@@ -244,4 +375,71 @@ header ul li a{
               transform: scale(1);
       opacity: 1;
     }
-  }
+}
+@keyframes rotate{
+    0%{
+        left: -300px;
+        top: -240px;
+        transform: rotate(0) scale(.2);
+    }
+    45%{
+        transform: rotate(-360deg) scale(1);
+        left: 0px;
+        top: 0px;
+    }
+    55%{
+        transform: rotate(-360deg) scale(1);
+        left: 0px;
+        top: 0px;
+    }
+    100%{
+        left: 230px;
+        top: -300px;
+        transform: rotate(0) scale(.2);
+    }
+}
+@keyframes golpe{
+    0% {
+        top: -400px;
+        transform: rotate(0) scale(.2);
+    }
+    20%{
+        top: 0px;
+        transform: rotate(-360deg) scale(1);
+        left: 0;
+    }
+    40%{
+        top: -600px;
+        left: -65vh;
+        transform: rotate(0) scale(.2);
+    }
+    60%{
+        top: 0;
+        left: 65vh;
+        transform: rotate(-360deg) scale(1);
+    }
+    80%{
+        top: -400px;
+        left: 0vh;
+        transform: rotate(0) scale(.2);
+    }
+    100% {
+        top: 0px;
+        left: 0vh;
+        transform: rotate(-360deg) scale(1);
+    }
+}
+@keyframes rebote{
+    0% {
+        top: -400px;
+        transform: rotate(0);
+    }
+    50%{
+        top: 0px;
+        transform: rotate(-360deg);
+    }
+    100% {
+        top: -400px;
+        transform: rotate(-760deg);
+    }
+}

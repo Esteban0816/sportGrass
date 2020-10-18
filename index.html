@@ -5,85 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sport Grass</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <section class="section-1">
-        <header>
-            <a href=""><img src="./assets/logo.png" alt="Logo" class="logo"></a>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Others</a></li>
-            </ul>
-        </header>
+    <header>
+        <a href=""><img src="./assets/logo.png" alt="Logo" class="logo"></a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Others</a></li>
+        </ul>
+    </header>
+    <section class="section" style="background: linear-gradient(90deg,rgba(0,0,0,.7),rgba(0, 0, 0, .4)),url('../assets/cancha.jpg');" id="section-1">
         <div class="content">
             <div class="textBox">
-                <h2>Sport <br><span>Grass</span></h2>
+                <h2>¿Quienes <br><span>somos ?</span></h2>
                 <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general, además la prestacion de servicios técnicos y de consultoría en las diferentes ramas de la arquitectura y de la ingeniería.</p>
-                <!-- <a href="#">View all products</a> -->
+                <a href="#section-3">Ver productos.</a>
             </div>
             <div class="imgBox">
-                <img src="./assets/deportista.png" class="image" alt="Grama">
+                <img src="./assets/balon-fut.png" class="image soccer" alt="Grama" width="250">
             </div>
         </div>
         <div class="content-thumb">
             <ul class="thumb">
-                <li><!--class="active"-->
-                    <img src="./assets/maxs.jpg" alt="" onclick="imgSlider(0)">
-                    <!-- Sport Grass -->
+                <li class="active" onclick="imgSlider(0)"><!--class="active"-->
+                    <img src="./assets/logo.png" alt="">
                 </li>
-                <li>
-                    <img src="./assets/DuoShape.jpg" alt="" onclick="imgSlider(1)">
-                    <!-- Sport Grounds -->
+                <li onclick="imgSlider(1)">
+                    <img src="./assets/sportgrounds.jpg" alt="">
                 </li>
-                <li>
-                    <img src="./assets/mixto.jpg" alt="" onclick="imgSlider(2)">
-                    <!-- Epi Sports -->
+                <li onclick="imgSlider(2)">
+                    <img src="./assets/epi.jpg" alt="">
                 </li>
-                <li>
-                    <img src="./assets/infill.jpg" alt="" onclick="imgSlider(3)">
-                    <!-- Apeteck -->
+                <li onclick="imgSlider(3)">
+                    <img src="./assets/apeteck.jpg" alt="">
                 </li>
             </ul>
             <span>Linea Sport Grass</span>
         </div>
         <ul class="sci">
             <li>
-                <a href="#"><img src="./assets/logos/whatsapp.png" alt=""></a>
-                <a href="#"><img src="./assets/logos/correo.png" alt=""></a>
-                <a href="#"><img src="./assets/logos/linkedin.png" alt=""></a>
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </li>
         </ul>
     </section>
-    <section>
-        <h1>Titulo</h1>
-        <h1>Titulo</h1>
-        <h1>Titulo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, accusamus voluptatibus. Eum quas voluptates beatae aperiam natus quam repudiandae pariatur voluptatum delectus tenetur, eveniet sed, explicabo architecto ea cupiditate quisquam?</p>
+    <section class="bg-light" id="section-2">
+        <h1>Servicios</h1>
+        <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general.</p>
+        <div class="container">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./assets/cancha.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>Estudio</h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./assets/cancha.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>Diseño y <br><span>planeación</span></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="./assets/cancha.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>Contratación y <br><span>ejecución</span></h2>
+                </div>
+            </div>
+        </div>
     </section>
-    <script type="text/javascript">
-        function imgSlider(anything){
-            const textBox = document.querySelector('.textBox')
-            const imgBox = document.querySelector('.imgBox')
-            switch (anything){
-                case 0:
-                    textBox.classList.add('goodbye-left')
-                    setTimeout(()=> {
-                        const html = `<img src="./assets/maxs.jpg" alt="" onclick="imgSlider(0)">
-                                    <p>Bla bla bla bla bla bvla xfdsf vsatrfawssdfsda fdsg bersgdfd sgfdsg dsfbvdfb fdsgvcxbfdsgdsfv fdbgfd gfdhrhy  tewrsg</p>`
-                        textBox.innerHTML = html
-                        textBox.classList.remove('goodbye-left')
-                        textBox.classList.add('hello')
-                    }, 500)
-                    imgBox.classList.add('goodbye-right')
-                break;
-                case 1:
-                    img.src = `./assets/img-duoShape.jpg`
-                break;
-            }
-        }
-    </script>
+    <section class="" id="section-3">
+        <div class="bg-img"></div>
+        <div class="section-content">
+            <h1>Sport Grass</h1>
+        </div>
+    </section>
+    
+    <!-- content inner -->
+    <div>
+        <div id="sportGrass" class="d-none">
+            <div class="textBox hello">
+                <h2>¿Quienes <br><span>somos ?</span></h2>
+                <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general, además la prestacion de servicios técnicos y de consultoría en las diferentes ramas de la arquitectura y de la ingeniería.</p>
+                <a href="#section-3">Ver productos.</a>
+            </div>
+            <div class="imgBox">
+                <img src="./assets/balon-fut.png" class="image soccer" alt="Grama" width="250" loading="lazy">
+            </div>
+        </div>
+        <div id="sportGrounds" class="d-none">
+            <div class="textBox hello">
+                <h2>Sport <br><span>Grounds</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates debitis, officiis reprehenderit earum exercitationem culpa quo eveniet modi voluptatem vero ad placeat corporis dignissimos asperiores eius consectetur voluptatibus a dicta.</p>
+                <a href="#">Ver productos.</a>
+            </div>
+            <div class="imgBox">
+                <img src="./assets/pelota-tennis.png" class="image tennis" alt="Grama" loading="lazy">
+            </div>
+        </div>
+        <div id="epiSports" class="d-none">
+            <div class="textBox hello">
+                <h2>Epi <br><span>Sports</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates debitis, officiis reprehenderit earum exercitationem culpa quo eveniet modi voluptatem vero ad placeat corporis dignissimos asperiores eius consectetur voluptatibus a dicta.</p>
+                <a href="#">Ver productos.</a>
+            </div>
+            <div class="imgBox">
+                <img src="./assets/balon-basket.png" class="image basket" alt="Grama" loading="lazy">
+            </div>
+        </div>
+        <div id="apeteck" class="d-none">
+            <div class="textBox hello">
+                <h2>apeteck</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates debitis, officiis reprehenderit earum exercitationem culpa quo eveniet modi voluptatem vero ad placeat corporis dignissimos asperiores eius consectetur voluptatibus a dicta.</p>
+                <a href="#">Ver productos.</a>
+            </div>
+            <div class="imgBox">
+                <img src="./assets/deportista.png" class="image" alt="Grama" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <!-- /content inner -->
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
 
