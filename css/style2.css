@@ -22,7 +22,7 @@ header{
     z-index: 10;
     width: 100%;
     padding: 10px 100px;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
 }
@@ -37,6 +37,7 @@ header .logo{
 header ul{
     position: relative;
     display: flex;
+    margin: 0;
 }
 header ul li{
     list-style: none;
@@ -46,7 +47,7 @@ header ul li a{
     color: #ffffff;
     font-weight: 400;
     margin-left: 40px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .cards{
     background: linear-gradient(-15deg,rgba(0,0,0,.6),rgba(0, 0, 0, .1)),url('../assets/cancha.jpg');
@@ -97,7 +98,7 @@ header ul li a{
     position: relative;
     background-color: transparent;
 }
-.diagonal::before{
+/* .diagonal::before{
     content: '';
     position: absolute;
     top: -50px;
@@ -105,9 +106,132 @@ header ul li a{
     width: 100%;
     height: calc(100% + 100px);
     clip-path: polygon(0 0, 80% 0, 90% 28%, 65% 100%, 0 100%);
-    background-color: #ffffff;
     z-index: 1;
+} */
+.background-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #058c3b;/* blue: 0375b4, green: 007849, green-electric: 3cc47c, other-green-select: 058c3b*/  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    clip-path: polygon(0 0, 80% 0, 90% 28%, 65% 100%, 0 100%);
 }
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.background-animation .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.background-animation .circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
 .content{
     position: absolute;
     z-index: 2;
@@ -129,12 +253,21 @@ header ul li a{
         transform: rotateZ(360deg);
     }
 }
+.content-info p{
+    color: #fff;
+    text-align: justify;
+    padding: 0px 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
 .content-info-title{
+    color: #fff;
     text-align: center;
     font-size: 2.9em;
     line-height: 1.25em;
     font-weight: 900;
     text-transform: uppercase;
+    text-shadow: 5px 5px 0px #295815;
 }
 .content-info-title span{
     color: var(--logo-color-green);
@@ -221,6 +354,101 @@ header ul li a{
     font-size: 14px;
     margin-top: 5px;
 }
+
+
+
+.testimonial-container{
+    width: 1200px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.testimonial-container .box{
+    position: relative;
+    padding: 80px 40px 40px;
+    transition: .5s;
+    text-align: center;
+    background: #fff;
+}
+.testimonial-container .box:hover{
+    background: var(--header-color);
+}
+.testimonial-container .box p{
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+}
+.testimonial-container .box h4{
+    margin: 20px;
+    padding: 0;
+    transition: .5s;
+    font-size: 18px;
+    color: #ff0057;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.testimonial-container .box h4 span{
+    font-weight: 600;
+    font-size: 14px;
+    color: #c5c5c5;
+    transition: .5s;
+
+}
+.testimonial-container .box:hover p,
+.testimonial-container .box:hover h4,
+.testimonial-container .box:hover h4 span{
+    color: #fff;
+}
+.testimonial-container .box .imgBox{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.testimonial-container .box::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background: url(quotes.png);
+    background-size: cover;
+    opacity: .05;
+    pointer-events: none;
+    transition: .5s;
+}
+.testimonial-container .box:hover::before{
+    transform: translateY(-60px);
+    opacity: 1;
+}
+.testimonial-container .box::after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    background: url(quotes.png);
+    background-size: cover;
+    opacity: .05;
+    pointer-events: none;
+    transition: .5s;
+    transform: rotate(180deg) translateY(0px);
+}
+.testimonial-container .box:hover::after{
+    transform: rotate(180deg) translateY(-60px);
+    opacity: 1;
+}
+
 
 
 
