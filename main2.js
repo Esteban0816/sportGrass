@@ -1,7 +1,15 @@
-function select(o){
+let opcion = 0
+function select(p){
+    if(p != undefined){
+        opcion = p
+    }else{
+        opcion = opcion
+        opcion ++
+    }
+
     const elements = document.querySelectorAll(`.icons-bar-content ul li`)
     const elementActive = document.querySelector(`.icons-bar-content ul .active`)
-    const selectElement = elements[o]
+    const selectElement = elements[opcion]
     
     /* change icon style */
     elementActive.classList.remove('active')
@@ -9,8 +17,8 @@ function select(o){
 
     /* change card */
     const cards = document.querySelectorAll(`#section-cards .cards`)
-    const cardInactive = cards[o-1]
-    const cardActivate = cards[o]
+    const cardInactive = cards[opcion-1]
+    const cardActivate = cards[opcion]
     cardInactive.classList.add('zoom-left')
     setTimeout(()=>{
         cardInactive.classList.add('d-none')
@@ -21,5 +29,6 @@ function select(o){
             cardActivate.classList.remove('zoom-right')
         },2000)
     }, 1500)
-
 }
+
+setInterval(select, 6000)
