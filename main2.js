@@ -31,4 +31,4 @@ function select(p){
     }, 1500)
 }
 
-setInterval(select, 6000)
+setInterval(select(), 6000)
