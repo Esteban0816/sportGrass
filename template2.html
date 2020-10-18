@@ -6,18 +6,22 @@
     <title>Sport Grass</title>
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
         <a href=""><img src="./assets/logo.png" alt="Logo" class="logo"></a>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Others</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="section">
+
+    <section class="section" id="section-cards">
         <div class="cards">
             <div class="diagonal">
                 <div class="background-animation">
@@ -35,8 +39,10 @@
                     </ul>
                 </div>
                 <div class="content">
-                    <img src="./assets/balon-fut.png" alt="" height="160" class="content-image">
-                    <img src="./assets/pasto.png" alt="" class="m-auto">
+                    <div class="d-grid">
+                        <img src="./assets/balon-fut.png" alt="" height="160" class="content-image">
+                        <img src="./assets/pasto.png" alt="" class="m-auto">
+                    </div>
                     <div class="content-info">
                         <h2 class="content-info-title">Sport <span>Grass</span></h2>
                         <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general.</p>
@@ -67,8 +73,37 @@
                     <img src="./assets/balon-fut.png" alt="" height="160" class="content-image">
                     <img src="./assets/pasto.png" alt="" class="m-auto">
                     <div class="content-info">
-                        <h2 class="content-info-title">Sport <span>Grass</span></h2>
-                        <p>En Sport Grass desarrollamos el estudio, diseño, planeación, contratación, y ejecución de toda clase de obras civiles, edificaciones, escenarios deportivos y bienes inmuebles en general.</p>
+                        <h2 class="content-info-title">Gramas <span>Fútbol</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quam sint accusantium quisquam hic quidem perspiciatis quaerat adipisci, molestias dolores dolorum quis dolor ut repellat commodi repudiandae assumenda expedita officia.</p>
+                        <div class="d-flex">
+                            <a href="#">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards d-none">
+            <div class="diagonal">
+                <div class="background-animation">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <img src="./assets/balon-fut.png" alt="" height="160" class="content-image">
+                    <img src="./assets/pasto.png" alt="" class="m-auto">
+                    <div class="content-info">
+                        <h2 class="content-info-title">Gramas <span>Béisbol</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quam sint accusantium quisquam hic quidem perspiciatis quaerat adipisci, molestias dolores dolorum quis dolor ut repellat commodi repudiandae assumenda expedita officia.</p>
                         <div class="d-flex">
                             <a href="#">Conoce más</a>
                         </div>
@@ -80,33 +115,33 @@
             <div class="icons-bar-content">
                 <ul>
                     <li class="active">
-                        <a href="#">
+                        <a href="#" onclick="select(0)">
                             <i class="fas fa-info"></i>
                             <span>Información</span>
                         </a>
                     </li>
                     <div></div>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="select(1)">
                             <i class="far fa-futbol"></i>
                             <span>Fútbol</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="select(2)">
                             <i class="fas fa-baseball-ball"></i>
                             <span>Béisbol</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="select(3)">
                             <i class="fas fa-football-ball"></i>
                             <span>Rugby</span>
                         </a>
                     </li>
                     <div></div>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="select(4)">
                             <i class="fas fa-basketball-ball"></i>
                             <span>Baloncesto</span>
                         </a>
@@ -147,35 +182,175 @@
             </div>
         </div>
     </section>
-    <section class="container" id="servicios">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img src="./assets/designer.svg" alt="" width="400">
+
+    <section class="container mt-4" id="servicios">
+        <h2 class="text-center mb-3">Servicios</h2>
+        <div class="row mb-5 mt-3">
+            <div class="col-12 col-md-4">
+                <div class="d-flex">
+                    <img src="./assets/studying.svg" alt="" width="270" class="m-auto">
+                </div>
+                <div class="">
+                    <h2 class="text-center">Estudio</h2>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quae harum architecto enim eos. Libero dignissimos dolorum doloremque quibusdam, quam maiores a autem, iusto quis ratione blanditiis perspiciatis ipsa enim!
-                </p>
+            <div class="col-12 col-md-4">
+                <div class="d-flex">
+                    <img src="./assets/designer.svg" alt="" width="270" class="m-auto">
+                </div>
+                <div class="">
+                    <h2 class="text-center">Diseño y planeación</h2>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quae harum architecto enim eos.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex">
+                    <img src="./assets/sport.svg" alt="" width="270" class="m-auto">
+                </div>
+                <div class="">
+                    <h2 class="text-center">Ejecución</h2>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
             </div>
         </div>
-        <div class="testimonial-container">
+        <div class="testimonial-container mt-5">
             <div class="box">
                 <div class="imgBox">
-                    <img src="person.jpg" alt="">
+                    <img src="./assets/user.svg" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum recusandae quaerat delectus molestias excepturi blanditiis eveniet odit.</p>
                 <h4>Someone Famous <br><span>Creative Director</span></h4>
             </div>
             <div class="box">
                 <div class="imgBox">
-                    <img src="person.jpg" alt="">
+                    <img src="./assets/user2.svg" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum recusandae quaerat delectus molestias excepturi blanditiis eveniet odit.</p>
                 <h4>Someone Famous <br><span>Creative Director</span></h4>
             </div>
         </div>
     </section>
-    <script type="text/javascript" src="main.js"></script>
+
+    <section class="contact mt-4">
+        <div class="contact-content">
+            <h2 class="text-center">Contáctenos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem laudantium voluptatibus nostrum, itaque sunt?</p>
+        </div>
+        <div class="container-contact">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Kr 5 7-36, Bogota, <br> Colombia.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>320 578 9602</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>contact@sportgrass.co</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5" style="height: 100vh;">
+            <h2 class="text-center">Galeria</h2>
+            <div class="card-columns">
+                <div class="card">
+                    <img src="./assets/parque.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./assets/img-duoShape.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./assets/grama-fut.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./assets/img-maxs.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./assets/poli.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="./assets/peter-glaser-qWs_Wa1JrKM-unsplash.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="art">
+            <div class="cont">
+                <section>
+                    <h1>Title</h1>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Team</a>
+                    <a href="#">Blog</a>
+                </section>
+                <section>
+                    <h1>Title</h1>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Team</a>
+                    <a href="#">Blog</a>
+                </section>
+                <section>
+                    <h1>Suscribe</h1>
+                    <form action="">
+                        <input type="email" placeholder="Your email">
+                        <input type="submit" value="Suscribe Now">
+                    </form>
+                    <div class="social">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </section>
+            </div>
+            <div class="notice">
+                Copyright protected &copy;
+                <strong>Esteban Coder</strong>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="main2.js"></script>
 </body>
 </html>
 
