@@ -2,6 +2,7 @@
 :root {
     --header-color: linear-gradient(90deg, rgb(28, 54, 67) 0, rgb(39, 59, 71) 25%, rgb(30, 83, 114));
     --header-color-transparent: linear-gradient(90deg, rgba(28, 54, 67, .85) 0, rgba(39, 59, 71, .85) 25%, rgba(30, 83, 114, .9));
+    --logo-color-green: #70a83b;
 }
 *{
     margin: 0;
@@ -130,7 +131,13 @@ header ul li a{
 }
 .content-info-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.9em;
+    line-height: 1.25em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.content-info-title span{
+    color: var(--logo-color-green);
 }
 .content-info p{
     margin-bottom: 10px;
@@ -162,7 +169,15 @@ header ul li a{
     justify-content: flex-start;
     align-items: center;
     margin: auto;
-    overflow: hidden;
+    overflow: auto;
+}
+.icons-bar-content ul::-webkit-scrollbar{
+    height: 6px;
+    background: #333;
+}
+.icons-bar-content ul::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
 }
 .icons-bar-content ul::before{
     content: "<";
